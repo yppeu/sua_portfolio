@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+    <!--Black+Han+Sans 폰트-->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Hahmlet&display=swap"
+          rel="stylesheet">
+
+    <title>Sua is free</title>
+    <style>
+
+        body {
+            font-family: 'Hahmlet', serif;
+            overflow-x: hidden;
+        }
+
+        /*아이유팬명록*/
+        .mytitle > h1 {
+            font-size: 5rem;
+            letter-spacing: -3px;
+        }
+
+        #temp {
+            font-size: 1.3rem;
+        }
+
+        /*헤더영역*/
+        .mytitle {
+            width: 100%;
+            height: 1100px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /*슬라이더*/
+        .myslide {
+            position: relative;
+        }
+
+        .carousel-inner {
+            height: 1100px; /* 이미지 높이 변경 */
+            position: absolute;
+            z-index: -1;
+        }
+
+        .carousel-item {
+        }
+
+        .d-block {
+            display: block;
+            height: 1500px;
+        }
+
+        .carousel-inner > .carousel-item > img {
+        }
+
+        /*프로필 전체 틀*/
+        .myhistorywarp {
+            position: absolute;
+            top: 750px;
+            z-index: -2;
+            width: 90%;
+            height: 1000px;
+            margin: auto;
+            border: 1px solid lightgrey;
+            border-radius: 5rem;
+            background-color: lightpink;
+        }
+
+        /*프로필정보 감싸는 틀*/
+        .myhistory {
+            position: absolute;
+            top: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .myhistory > p {
+            display: block;
+            width: 100%;
+            border: 1px solid lightgrey;
+            font-size: 1.3rem;
+            padding: 2rem;
+            border-radius: 50px;
+            margin: 20px auto;
+            color: black;
+        }
+
+
+        /*인스타그램*/
+        .myinstagram {
+            position: absolute;
+            top: 1700px;
+            width: 100%;
+            padding-top: 30px;
+        }
+
+        .sectionwarp {
+            position: absolute;
+            top: 2500px;
+        }
+
+        .sectionwarp > p {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #chrbtn {
+            font-size: 17px;
+            padding: 10px
+        }
+
+        /*카드 섹션*/
+        .mysection {
+            position: absolute;
+            top: 2500px;
+            border: 1px solid darkgray;
+            width: 35%;
+            margin: 50px auto;
+            padding: 1%;
+            display: none;
+        }
+
+        .mysection > button {
+            margin: 10px auto;
+        }
+
+
+        .myfooter {
+            border: 1px solid darkgray;
+            font-size: 10px;
+            margin-bottom: 1.5%;
+        }
+
+        .blockquote > p {
+            font-size: 16px;
+        }
+
+        .blockquote > :last-child {
+            font-size: 15px;
+        }
+
+        /*푸터*/
+        .mylastfooter {
+            position: absolute;
+            top: 2500px;
+            margin: 100px 0 auto;
+        }
+
+
+    </style>
+
+    <script>
+
+        const content = "SUA IS DEVELOPER.";
+        const text = document.querySelector(".text");
+        document.getElementById("#disabled")
+        let i = 0;
+
+        function typing() {
+            if (i > content.length) {
+                let txt = content.charAt(i);
+                console.log(content.charAt(i));
+                text.innerHTML = txt;
+                i++;
+            }
+        }
+        setInterval(typing, 200);
+
+
+        $.ajax({
+            type: "GET",
+            url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+            data: {},
+            success: function (response) {
+                let temps = response['temp']
+                let cloud = response['clouds']
+
+                $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
+                $('#temp').addClass('text-center');
+            }
+        });
+
+        function chrbtn() {
+            $('#sectionwarp').show();
+        }
+
+        function closebtn() {
+            $('#sectionwarp').hide();
+        }
+
+
+    </script>
+</head>
+
+<body>
+<!--슬라이더 시작-->
+<div class="myslide">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/sua3.jpg"
+                     class="d-block w-100"
+                     alt="메인이미지1">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/sua2.jpg"
+                     class="d-block w-100"
+                     alt="메인이미지2">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/sua1.jpg"
+                     class="d-block w-100"
+                     alt="메인이미지3">
+            </div>
+        </div>
+    </div>
+</div>
+<!--헤더 시작-->
+<div class="mytitle">
+    <span class="text"></span>
+    <p id="temp"></p>
+</div>
+<!--슬라이더 끝-->
+<!--헤더 끝-->
+
+<!--프로필 시작-->
+<div class="myhistorywarp">
+    <div class="myhistory">
+        <p class="btn btn-outline-danger">"연수아"</p>
+        <p class="btn btn-outline-danger">"162cm"</p>
+        <p class="btn btn-outline-danger">"1994년 2월 23일 / IESTP"</p>
+    </div>
+</div>
+<!--프로필 끝-->
+
+<!--인스타그램 시작-->
+<div class="myinstagram">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="./img/sua3.jpg"
+                     class="card-img-top" alt="카드사진1">
+
+                <div class="card-body">
+                    <h5 class="card-title">dlwlrma</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./img/sua3.jpg"
+                     class="card-img-top"
+                     alt="카드사진2">
+                <div class="card-body">
+                    <h5 class="card-title">dlwlrma</h5>
+                    <p class="card-text">This is a short card.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="./img/sua3.jpg"
+                     class="card-img-top"
+                     alt="카드사진3">
+                <div class="card-body">
+                    <h5 class="card-title">dlwlrma</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--인스타그램 끝-->
+
+<!--카드 전체 시작-->
+<div class="sectionwarp">
+    <p>To. IU</p>
+    <div class="d-grid gap-2 col-1 mx-auto">
+        <button id="chrbtn" onclick="chrbtn()" type="button"
+                class="btn btn-outline-danger">응원남기기
+        </button>
+    </div>
+    <!--카드 중간 시작-->
+    <div id="sectionwarp" class="mysection">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="닉네임">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="응원댓글" rows="3"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-danger">확인</button>
+
+        <!--댓글 시작-->
+        <div class="myfooter">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>역시 아이유!</p>
+                    <footer class="blockquote-footer">이지은팬</footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="myfooter">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>응원해용^.^</p>
+                    <footer class="blockquote-footer">아이유짱</footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="myfooter">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>잿빛감성!아이유!</p>
+                    <footer class="blockquote-footer">이지은내꼬</footer>
+                </blockquote>
+            </div>
+        </div>
+        <button onclick="closebtn()" type="button" class="btn btn-danger">닫기</button>
+        <!--댓글 끝-->
+    </div>
+    <!--카드 중간 끝-->
+</div>
+<!--카드 전체 끝-->
+
+<!--푸터 시작-->
+
+<div class="mylastfooter">
+    <div class="card text-center">
+        <div class="card-header">
+            EDAM엔터테인먼트
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">EDAM</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+    </div>
+</div>
+<!--푸터 끝-->
+
+</body>
+</html>
