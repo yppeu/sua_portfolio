@@ -24,10 +24,12 @@
             overflow-x: hidden;
         }
 
-        /*아이유팬명록*/
-        .mytitle > h1 {
+        /* SUA text*/
+        .text {
+            position: relative;
             font-size: 5rem;
             letter-spacing: -3px;
+            z-index: 99999;
         }
 
         #temp {
@@ -169,20 +171,19 @@
 
     <script>
 
-        const content = "SUA IS DEVELOPER.";
-        const text = document.querySelector(".text");
-        document.getElementById("#disabled")
+        let content = "SU IS DEVELOPER.";
+        let text = document.querySelector(".text");
         let i = 0;
 
         function typing() {
             if (i > content.length) {
                 let txt = content.charAt(i);
-                console.log(content.charAt(i));
-                text.innerHTML = txt;
+                text.innerHTML += txt;
                 i++;
             }
         }
         setInterval(typing, 200);
+
 
 
         $.ajax({
