@@ -45,7 +45,7 @@
 
         /*타이핑효과*/
         #maintext {
-            font-size: 5rem;
+            font-size: 4rem;
             letter-spacing: -0.2rem;
             text-align: center;
         }
@@ -72,72 +72,94 @@
         .carousel-inner > .carousel-item > img {
         }
 
-
         /*프로필정보 감싸는 틀*/
-        .myhistory {
+        .myprofile {
             position: relative;
             width: 100%;
-            text-align: center;
             padding-top: 150px;
-            padding-bottom: 300px;
+            padding-bottom: 30px;
             background-color: powderblue;
         }
 
-        .myhistory > h1 {
-            font-size: 4rem;
+        .profilesub {
+            width: 60%;
+            height: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /*about me*/
+        .profilesub > h1 {
+            width: 100%;
+            font-size: 3.5rem;
+            font-weight: bold;
             letter-spacing: -0.2rem;
             padding-bottom: 60px;
             text-align: center;
-            margin-bottom: 50px;
         }
 
-        .myhistory > p {
-            position: absolute;
-            top: 300px;
-            display: inline;
-            width: 20%;
-            border: 1px solid white;
+        /*프로필 목록*/
+        .profilesub li {
+            width: 40%;
+            display: inline-block;
+            margin: 10px 20px;
             font-size: 1.3rem;
-            padding: 4rem;
-            border-radius: 30px;
-            color: black;
-            background-color: whitesmoke;
+            padding: 3rem;
+            border-radius: 100px;
+            border: 1px solid white;
+            text-align: center;
         }
 
-        /*스터디*/
+        /*프로필 목록 마우스오버*/
+        .profilesub li:hover {
+            width: 40%;
+            display: inline-block;
+            margin: 10px 20px;
+            font-size: 1.3rem;
+            padding: 3rem;
+            border-radius: 100px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        /*스터디 목록*/
         .mystudy {
             position: relative;
-            top: 300px;
+            top: 150px;
+            padding-bottom: 100px;
             width: 100%;
+            ext-align: center;
         }
 
         .studycard > h1 {
-            font-size: 4rem;
-            letter-spacing: -0.2rem;
-            padding-bottom: 60px;
+            width: 90%;
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: -0.1rem;
+            padding-bottom: 70px;
             text-align: center;
+            color: powderblue;
+            margin: 0 auto;
         }
 
         .studycard > .studybody {
-            width: 33.1%;
+            width: 30%;
+            height: 300px;
             display: inline-block;
-            background-color: white;
             text-align: center;
-            padding: 100px;
-            border-radius: 30px;
+            padding: 80px;
+            margin-left: 30px;
+            border: 1px solid powderblue;
+            border-radius: 100px;
         }
 
-        /*카드*/
+        /*인스타*/
         .myinstagram {
             position: relative;
-            top: 800px;
+            top: 200px;
             width: 100%;
             padding-top: 30px;
-        }
-
-        .sectionwarp {
-            position: absolute;
-            top: 2500px;
         }
 
         .sectionwarp > p {
@@ -146,31 +168,9 @@
             font-size: 30px;
         }
 
-        #chrbtn {
-            font-size: 17px;
-            padding: 10px
-        }
-
-        /*카드 섹션*/
-        .mysection {
-            position: absolute;
-            top: 2500px;
-            border: 1px solid darkgray;
-            width: 35%;
-            margin: 50px auto;
-            padding: 1%;
-            display: none;
-        }
 
         .mysection > button {
             margin: 10px auto;
-        }
-
-
-        .myfooter {
-            border: 1px solid darkgray;
-            font-size: 10px;
-            margin-bottom: 1.5%;
         }
 
         .blockquote > p {
@@ -183,10 +183,22 @@
 
         /*푸터*/
         .mylastfooter {
-            position: absolute;
-            top: 2500px;
-            margin: 100px 0 auto;
+            position: relative;
+            top: 300px;
+            width: 100%;
+            margin: 0 auto;
         }
+
+        .mylastfooter h5 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .mylastfooter p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -222,12 +234,14 @@
 <!--헤더 끝-->
 
 <!--프로필 시작-->
-<div class="myhistory">
-    <h1>ABOUT ME</h1>
-    <p>"연수아"</p>
-    <p>"1994년 2월 23일"</p>
-    <p>"010-7343-1959"</p>
-    <p>"yppeu@naver.com"</p>
+<div class="myprofile">
+    <div class="profilesub">
+        <h1>ABOUT ME</h1>
+        <li>연수아</li>
+        <li>1994년 2월 23일</li>
+        <li>010-7343-1959</li>
+        <li>yppeu@naver.com</li>
+    </div>
 </div>
 <!--프로필 끝-->
 
@@ -237,19 +251,21 @@
         <h1>STUDYING</h1>
         <div class="studybody">
             <h1 class="card-title">wix</h1>
-            <p class="card-text">과거 업무 당시 디자인 저장소</p>
-            <a href="https://suaxyn.wixsite.com/sunet" class="btn btn-outline-danger">Go somewhere</a>
+            <p class="card-text">과거 업무 디자인 저장소</p>
+            <a href="https://suaxyn.wixsite.com/sunet"
+               class="btn btn-outline-info" target=”_blank”>Go somewhere</a>
         </div>
         <div class="studybody">
             <h1 class="card-title">git</h1>
-            <p class="card-text">포폴 및 알고리즘 공부 소스 코드 저장소 입니다.</p>
-            <a href="https://github.com/yppeu" class="btn btn-outline-danger">Go somewhere</a>
+            <p class="card-text">개발 소스 코드 저장소</p>
+            <a href="https://github.com/yppeu"
+               class="btn btn-outline-info" target=”_blank”>Go somewhere</a>
         </div>
         <div class="studybody">
             <h1 class="card-title">notion</h1>
-            <p class="card-text">개발 공부 및 지식 공유 저장소 입니다.</p>
+            <p class="card-text">공부 및 개발 지식 공유 저장소</p>
             <a href="https://knowing-building-f15.notion.site/cadb298485934006a7f608fcafef489e"
-               class="btn btn-outline-danger">Go somewhere</a>
+               class="btn btn-outline-info" target=”_blank”>Go somewhere</a>
         </div>
     </div>
 </div>
@@ -260,38 +276,33 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
-                <img src="./img/sua3.jpg"
+                <img src="./img/insimg1.jpg"
                      class="card-img-top" alt="카드사진1">
-
                 <div class="card-body">
-                    <h5 class="card-title">dlwlrma</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
+                    <h5 class="card-title">sunet</h5>
+                    <p class="card-text">one of them</p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="./img/sua3.jpg"
+                <img src="./img/insimg2.jpg"
                      class="card-img-top"
                      alt="카드사진2">
                 <div class="card-body">
-                    <h5 class="card-title">dlwlrma</h5>
-                    <p class="card-text">This is a short card.</p>
+                    <h5 class="card-title">sunet</h5>
+                    <p class="card-text">one of them</p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="./img/sua3.jpg"
+                <img src="./img/insimg3.jpg"
                      class="card-img-top"
                      alt="카드사진3">
                 <div class="card-body">
-                    <h5 class="card-title">dlwlrma</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content.</p>
+                    <h5 class="card-title">sunet</h5>
+                    <p class="card-text">one of them</p>
                 </div>
             </div>
         </div>
@@ -299,69 +310,13 @@
 </div>
 <!--인스타그램 끝-->
 
-<!--카드 전체 시작-->
-<div class="sectionwarp">
-    <p>To. IU</p>
-    <div class="d-grid gap-2 col-1 mx-auto">
-        <button id="chrbtn" onclick="chrbtn()" type="button"
-                class="btn btn-outline-danger">응원남기기
-        </button>
-    </div>
-    <!--카드 중간 시작-->
-    <div id="sectionwarp" class="mysection">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="닉네임">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="응원댓글" rows="3"></textarea>
-        </div>
-
-        <button type="button" class="btn btn-danger">확인</button>
-
-        <!--댓글 시작-->
-        <div class="myfooter">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>역시 아이유!</p>
-                    <footer class="blockquote-footer">이지은팬</footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="myfooter">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>응원해용^.^</p>
-                    <footer class="blockquote-footer">아이유짱</footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="myfooter">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p>잿빛감성!아이유!</p>
-                    <footer class="blockquote-footer">이지은내꼬</footer>
-                </blockquote>
-            </div>
-        </div>
-        <button onclick="closebtn()" type="button" class="btn btn-danger">닫기</button>
-        <!--댓글 끝-->
-    </div>
-    <!--카드 중간 끝-->
-</div>
-<!--카드 전체 끝-->
-
 <!--푸터 시작-->
 
 <div class="mylastfooter">
-    <div class="card text-center">
-        <div class="card-header">
-            EDAM엔터테인먼트
-        </div>
+    <div class="card">
         <div class="card-body">
-            <h5 class="card-title">EDAM</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5>suanet</h5>
+            <p class="card-text">© 2022. Yeon Sua. All rights reserved.</p>
         </div>
     </div>
 </div>
@@ -404,7 +359,6 @@
 
     setInterval(typing, 200);
 
-
     $.ajax({
         type: "GET",
         url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
@@ -418,13 +372,15 @@
         }
     });
 
-    function chrbtn() {
-        $('#sectionwarp').show();
-    }
+    /*
+        function chrbtn() {
+            $('#sectionwarp').show();
+        }
 
-    function closebtn() {
-        $('#sectionwarp').hide();
-    }
+        function closebtn() {
+            $('#sectionwarp').hide();
+        }
+    */
 
 
 </script>
