@@ -45,8 +45,9 @@
 
         /*타이핑효과*/
         #maintext {
-            font-size: 70px;
+            font-size: 5rem;
             letter-spacing: -0.2rem;
+            text-align: center;
         }
 
         /*슬라이더*/
@@ -71,43 +72,65 @@
         .carousel-inner > .carousel-item > img {
         }
 
-        /*프로필 전체 틀*/
-        .myhistorywarp {
-            position: absolute;
-            top: 750px;
-            z-index: -2;
-            width: 90%;
-            height: 1000px;
-            margin: auto;
-            border: 1px solid lightgrey;
-            border-radius: 5rem;
-            background-color: lightpink;
-        }
 
         /*프로필정보 감싸는 틀*/
         .myhistory {
-            position: absolute;
-            top: 300px;
+            position: relative;
+            width: 100%;
             text-align: center;
-            margin: 0 auto;
+            padding-top: 150px;
+            padding-bottom: 300px;
+            background-color: powderblue;
+        }
+
+        .myhistory > h1 {
+            font-size: 4rem;
+            letter-spacing: -0.2rem;
+            padding-bottom: 60px;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .myhistory > p {
-            display: block;
-            width: 100%;
-            border: 1px solid lightgrey;
+            position: absolute;
+            top: 300px;
+            display: inline;
+            width: 20%;
+            border: 1px solid white;
             font-size: 1.3rem;
-            padding: 2rem;
-            border-radius: 50px;
-            margin: 20px auto;
+            padding: 4rem;
+            border-radius: 30px;
             color: black;
+            background-color: whitesmoke;
         }
 
+        /*스터디*/
+        .mystudy {
+            position: relative;
+            top: 300px;
+            width: 100%;
+        }
 
-        /*인스타그램*/
+        .studycard > h1 {
+            font-size: 4rem;
+            letter-spacing: -0.2rem;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .studycard > .studybody {
+            width: 33.1%;
+            display: inline-block;
+            background-color: white;
+            text-align: center;
+            padding: 100px;
+            border-radius: 30px;
+        }
+
+        /*카드*/
         .myinstagram {
-            position: absolute;
-            top: 1700px;
+            position: relative;
+            top: 800px;
             width: 100%;
             padding-top: 30px;
         }
@@ -164,11 +187,7 @@
             top: 2500px;
             margin: 100px 0 auto;
         }
-
-
     </style>
-
-
 </head>
 
 <body>
@@ -203,14 +222,38 @@
 <!--헤더 끝-->
 
 <!--프로필 시작-->
-<div class="myhistorywarp">
-    <div class="myhistory">
-        <p class="btn btn-outline-danger">"연수아"</p>
-        <p class="btn btn-outline-danger">"162cm"</p>
-        <p class="btn btn-outline-danger">"1994년 2월 23일 / IESTP"</p>
-    </div>
+<div class="myhistory">
+    <h1>ABOUT ME</h1>
+    <p>"연수아"</p>
+    <p>"1994년 2월 23일"</p>
+    <p>"010-7343-1959"</p>
+    <p>"yppeu@naver.com"</p>
 </div>
 <!--프로필 끝-->
+
+<!--스터디 시작-->
+<div class="mystudy">
+    <div class="studycard">
+        <h1>STUDYING</h1>
+        <div class="studybody">
+            <h1 class="card-title">wix</h1>
+            <p class="card-text">과거 업무 당시 디자인 저장소</p>
+            <a href="https://suaxyn.wixsite.com/sunet" class="btn btn-outline-danger">Go somewhere</a>
+        </div>
+        <div class="studybody">
+            <h1 class="card-title">git</h1>
+            <p class="card-text">포폴 및 알고리즘 공부 소스 코드 저장소 입니다.</p>
+            <a href="https://github.com/yppeu" class="btn btn-outline-danger">Go somewhere</a>
+        </div>
+        <div class="studybody">
+            <h1 class="card-title">notion</h1>
+            <p class="card-text">개발 공부 및 지식 공유 저장소 입니다.</p>
+            <a href="https://knowing-building-f15.notion.site/cadb298485934006a7f608fcafef489e"
+               class="btn btn-outline-danger">Go somewhere</a>
+        </div>
+    </div>
+</div>
+<!--스터디 끝-->
 
 <!--인스타그램 시작-->
 <div class="myinstagram">
@@ -353,34 +396,35 @@
     function typing() {
         let txt = content[i++];
         contenttext.innerHTML += txt;
-            if (i > content.length) {
-                contenttext.textContent = '';
-                i = 0;
-            }
+        if (i > content.length) {
+            contenttext.textContent = '';
+            i = 0;
         }
-        setInterval(typing, 200);
+    }
+
+    setInterval(typing, 200);
 
 
-        $.ajax({
-            type: "GET",
-            url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-            data: {},
-            success: function (response) {
-                let temps = response['temp']
-                let cloud = response['clouds']
+    $.ajax({
+        type: "GET",
+        url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+        data: {},
+        success: function (response) {
+            let temps = response['temp']
+            let cloud = response['clouds']
 
-                $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
-                $('#temp').addClass('text-center');
-            }
-        });
-
-        function chrbtn() {
-            $('#sectionwarp').show();
+            $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
+            $('#temp').addClass('text-center');
         }
+    });
 
-        function closebtn() {
-            $('#sectionwarp').hide();
-        }
+    function chrbtn() {
+        $('#sectionwarp').show();
+    }
+
+    function closebtn() {
+        $('#sectionwarp').hide();
+    }
 
 
 </script>
