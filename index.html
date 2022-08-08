@@ -24,13 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* SUA text*/
-        .text {
-            position: relative;
-            font-size: 5rem;
-            letter-spacing: -3px;
-            z-index: 99999;
-        }
 
         #temp {
             font-size: 1.3rem;
@@ -48,6 +41,12 @@
             align-items: center;
             position: relative;
             z-index: 1;
+        }
+
+        /*타이핑효과*/
+        #maintext {
+            font-size: 70px;
+            letter-spacing: -0.2rem;
         }
 
         /*슬라이더*/
@@ -169,46 +168,7 @@
 
     </style>
 
-    <script>
 
-        let content = "SU IS DEVELOPER.";
-        let text = document.querySelector(".text");
-        let i = 0;
-
-        function typing() {
-            if (i > content.length) {
-                let txt = content.charAt(i);
-                text.innerHTML += txt;
-                i++;
-            }
-        }
-        setInterval(typing, 200);
-
-
-
-        $.ajax({
-            type: "GET",
-            url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-            data: {},
-            success: function (response) {
-                let temps = response['temp']
-                let cloud = response['clouds']
-
-                $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
-                $('#temp').addClass('text-center');
-            }
-        });
-
-        function chrbtn() {
-            $('#sectionwarp').show();
-        }
-
-        function closebtn() {
-            $('#sectionwarp').hide();
-        }
-
-
-    </script>
 </head>
 
 <body>
@@ -236,7 +196,7 @@
 </div>
 <!--헤더 시작-->
 <div class="mytitle">
-    <span class="text"></span>
+    <p id="maintext"></p>
     <p id="temp"></p>
 </div>
 <!--슬라이더 끝-->
@@ -365,4 +325,63 @@
 <!--푸터 끝-->
 
 </body>
+
+<script>
+
+    window.onload = function () {
+    };
+
+    /*    let content = 'SUA IS DEVELOPER.';
+        let contenttext = document.getElementById('maintext');
+        let i = 0;
+
+        function typing() {
+            if (i < content.length) {
+                let txt = content.charAt(i);
+                contenttext.innerHTML += txt;
+                console.log(contenttext);
+                i++;
+            }
+        }
+        setInterval(typing, 200);*/
+
+
+    let content = 'SUA IS DEVELOPER.';
+    let contenttext = document.getElementById('maintext');
+    let i = 0;
+
+    function typing() {
+        let txt = content[i++];
+        contenttext.innerHTML += txt;
+            if (i > content.length) {
+                contenttext.textContent = '';
+                i = 0;
+            }
+        }
+        setInterval(typing, 200);
+
+
+        $.ajax({
+            type: "GET",
+            url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
+            data: {},
+            success: function (response) {
+                let temps = response['temp']
+                let cloud = response['clouds']
+
+                $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
+                $('#temp').addClass('text-center');
+            }
+        });
+
+        function chrbtn() {
+            $('#sectionwarp').show();
+        }
+
+        function closebtn() {
+            $('#sectionwarp').hide();
+        }
+
+
+</script>
 </html>
