@@ -23,6 +23,7 @@
     <title>Sua is free</title>
     <style>
 
+
         html {
             font-size: 62.5%;
         }
@@ -199,9 +200,33 @@
             color: white;
         }
 
+        /*work 목록*/
         .myworklist {
             width: 100%;
             min-width: 576px;
+            background-color: lightsalmon;
+            padding: 10.6rem;
+        }
+
+        .myworklist > h1 {
+            width: 100%;
+            min-width: 368px;
+            font-size: 5.6rem;
+            font-weight: bold;
+            letter-spacing: -0.1rem;
+            padding-bottom: 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .myworklist > .worklist {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+
         }
 
         /*인스타그램 전체 틀*/
@@ -327,25 +352,24 @@
 
 <!--work 목록 시작-->
 <div class="myworklist">
-    <div class="card mb-3">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content.
-                This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h1>WORKS</h1>
+    <div class="worklist">
+        <div class="card mb-3">
+            <img src="./img/main1.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">포트폴리오 페이지</h5>
+                <a href="https://github.com/yppeu/suaisfree"
+                   class="btn btn-outline-info" target=”_blank”>code</a>
+            </div>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content.
-                This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="card mb-3">
+            <img src="./img/main1.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">포트폴리오 페이지</h5>
+                <a href="https://github.com/yppeu/suaisfree"
+                   class="btn btn-outline-info" target=”_blank”>code</a>
+            </div>
         </div>
-        <img src="..." class="card-img-bottom" alt="...">
     </div>
 </div>
 <!--work 목록 끝-->
