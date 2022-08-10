@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Hahmlet&display=swap"
           rel="stylesheet">
 
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">-->
+
     <title>Sua is free</title>
     <style>
 
@@ -58,6 +60,7 @@
             text-align: center;
             font-size: 4.6rem;
             letter-spacing: -0.2rem;
+            margin: 0 auto;
         }
 
         /*캐러셀 이미지*/
@@ -85,30 +88,32 @@
         .carousel-inner > .carousel-item > img {
         }
 
-        /*프로필정보 감싸는 틀*/
+        /*프로필정보 감싸는 전체 틀*/
         .myprofile {
             position: relative;
             width: 100%;
             min-width: 768px;
-            padding-top: 140px;
-            padding-bottom: 30px;
+            padding-top: 40px;
             background-color: powderblue;
         }
 
+        /*서브 틀*/
         .profilesub {
-            width: 60%;
-            height: 500px;
+            width: 80%;
+            min-width: 768px;
+            height: 600px;
             margin: 0 auto;
+            padding-top: 90px;
             text-align: center;
         }
 
         /*about me*/
         .profilesub > h1 {
             width: 100%;
-            min-width: 500px;
-            font-size: 3.5rem;
+            min-width: 768px;
+            font-size: 5.6rem;
             font-weight: bold;
-            letter-spacing: -0.2rem;
+            letter-spacing: -0.1rem;
             padding-bottom: 60px;
             text-align: center;
         }
@@ -116,74 +121,98 @@
         /*프로필 목록*/
         .profilesub li {
             width: 30%;
-            min-width: 400px;
+            min-width: 368px;
             display: inline-block;
-            margin: 0.4rem 3rem;
-            font-size: 1.3rem;
-            padding: 2.3rem;
-            border-radius: 4rem;
+            margin: 0.6rem;
+            padding: 3.6rem;
+            border-radius: 50px;
             border: 1px solid white;
             text-align: center;
         }
 
         /*프로필 목록 마우스오버*/
         .profilesub li:hover {
-            width: 40%;
+            width: 30%;
+            min-width: 368px;
             display: inline-block;
-            margin: 10px 35px;
-            font-size: 1.3rem;
-            padding: 3rem;
-            border-radius: 100px;
+            margin: 0.6rem;
+            padding: 3.6rem;
+            border-radius: 50px;
             background-color: black;
             color: white;
             text-align: center;
         }
 
-        /*스터디 목록*/
+        /*스터디 전체 틀*/
         .mystudy {
             position: relative;
-            top: 150px;
-            padding-bottom: 100px;
             width: 100%;
-            min-width: 500px;
+            min-width: 768px;
+            padding: 13.6rem 13.6rem;
             text-align: center;
+            background-color: whitesmoke;
         }
 
         .studycard > h1 {
-            width: 90%;
-            font-size: 3.5rem;
+            width: 100%;
+            min-width: 768px;
+            font-size: 5.6rem;
             font-weight: bold;
-            letter-spacing: -0.1rem;
-            padding-bottom: 70px;
+            letter-spacing: 0.2rem;
+            padding-bottom: 60px;
             text-align: center;
             color: powderblue;
-            margin: 0 auto;
+        }
+
+        /*스터디 감싸는 틀*/
+        .studycard {
+            width: 100%;
+            min-width: 768px;
         }
 
         .studycard > .studybody {
             width: 30%;
-            height: 300px;
+            height: 250px;
             display: inline-block;
+            padding-top: 7rem;
+            margin: 2px;
             text-align: center;
-            padding: 80px;
             border: 1px solid powderblue;
-            border-radius: 100px;
+            border-radius: 50px;
+            background-color: white;
         }
 
-        /*인스타*/
+        .studycard > .studybody > a {
+            border-radius: 50px;
+            margin: 0.6rem auto;
+            padding: 1rem;
+        }
+
+        .studycard > .studybody > a:hover {
+            border-radius: 50px;
+            margin: 0.6rem auto;
+            padding: 1rem;
+            background-color: #0dcaf0;
+            color: white;
+        }
+
+        /*인스타그램 전체 틀*/
         .myinstagram {
             position: relative;
-            top: 200px;
             width: 100%;
-            padding-top: 30px;
+            min-width: 768px;
+            padding-top: 10.6rem;
+            padding-bottom: 10.6rem;
+            background-color: whitesmoke;
         }
 
         .sectionwarp > p {
+            width: 100%;
+            min-width: 768px;
             margin-top: 100px;
             text-align: center;
             font-size: 30px;
         }
-
 
         .mysection > button {
             margin: 10px auto;
@@ -197,7 +226,7 @@
             font-size: 15px;
         }
 
-        /*푸터*/
+        /*하단 전체 틀*/
         .mylastfooter {
             position: relative;
             top: 300px;
