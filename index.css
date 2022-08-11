@@ -7,6 +7,7 @@ body {
     font-size: 1.6rem;
     font-family: 'Hahmlet', serif;
     overflow-x: hidden;
+    background-color: whitesmoke;
 }
 
 #temp {
@@ -65,43 +66,47 @@ body {
     position: relative;
     width: 100%;
     min-width: 576px;
-    min-height: 768px;
     text-align: center;
     background-color: whitesmoke;
+    margin: 0 auto;
 }
 
 /*about me 서브틀*/
 .profilesub {
     width: 100%;
     min-width: 576px;
-    height: 767px;
-    padding: 4.6rem;
+    height: 867px;
+    padding: 6.6rem;
+    background-color: whitesmoke;
 }
 
 .profilesub > h1 {
     width: 100%;
     font-size: 5.6rem;
     font-weight: bold;
-    letter-spacing: 0.2rem;
+    letter-spacing: -0.1rem;
     padding-top: 70px;
     padding-bottom: 70px;
-    color: powderblue;
 }
 
 /*이미지틀*/
-.profileimg{
+.profileimg {
     float: left;
     width: 50%;
     min-width: 576px;
-    margin: 0 auto;
+}
+
+.profileimg > img {
+    border-radius: 20px;
+    width: 90%;
 }
 
 /*텍스트틀*/
-.profiletext{
+.profiletext {
     float: right;
     width: 50%;
     min-width: 576px;
-    padding: 0 6.6rem 3.6rem;
+    padding: 3.6rem 6.6rem 3.6rem;
 }
 
 .profiletext > h3 {
@@ -120,17 +125,17 @@ body {
 }
 
 
-/*스터디 전체 틀*/
+/*스터디 전체틀*/
 .mystudy {
     position: relative;
     width: 100%;
     min-width: 576px;
-    min-height: 768px;
+    height: 867px;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: powderblue;
 }
 
-/*스터디 감싸는 틀*/
+/*스터디 서브틀*/
 .studycard {
     width: 100%;
     min-width: 576px;
@@ -138,73 +143,99 @@ body {
 
 .studycard > h1 {
     width: 100%;
-    font-size: 5.6rem;
+    min-width: 576px;
+    font-size: 6.6rem;
     font-weight: bold;
     letter-spacing: 0.2rem;
-    padding-top: 70px;
+    padding-top: 120px;
     padding-bottom: 70px;
-    color: powderblue;
+    color: white;
 }
 
 /*스터디 목록 바디*/
 .studycard > .studybody {
-    display: block;
-    width: 30%;
-    min-width: 576px;
-    height: 250px;
-    padding-top: 7rem;
-    margin: 1.6rem auto;
+    float: left;
+    width: 25%;
+    padding: 10.6rem;
+    margin: 5.6rem;
     text-align: center;
-    border: 1px solid powderblue;
-    border-radius: 30px;
+    border-radius: 100px;
     background-color: white;
 }
 
 .studycard > .studybody > h1 {
-    font-size: 3.6rem;
+    font-size: 4.6rem;
 }
 
 .studycard > .studybody > a {
     border-radius: 50px;
     margin: 0.6rem auto;
     padding: 1rem;
+    font-size: 1.6rem;
 }
 
 .studycard > .studybody > a:hover {
     border-radius: 50px;
     margin: 0.6rem auto;
     padding: 1rem;
+    border: 1px solid white;
     background-color: #0dcaf0;
     color: white;
 }
 
-/*work 목록*/
+/*work 목록 전체틀*/
 .myworklist {
+    position: relative;
+    top: -40px;
     width: 100%;
     min-width: 576px;
     background-color: lightsalmon;
-    padding: 10.6rem;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    border-radius: 50px;
 }
 
 .myworklist > h1 {
     width: 100%;
     min-width: 368px;
-    font-size: 5.6rem;
+    font-size: 6.6rem;
     font-weight: bold;
     letter-spacing: -0.1rem;
-    padding-bottom: 60px;
-    text-align: center;
     color: white;
 }
 
 .myworklist > .worklist {
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px;
+    margin: 100px;
+}
 
+.worklist h3 {
+    margin: 2.6rem auto 1.6rem;
+}
+
+.worklist a {
+    border-radius: 50px;
+    padding: 1rem 1.6rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: 1px solid lightsalmon;
+    background-color: white;
+    color: lightsalmon;
+}
+
+.worklist a:hover {
+    border-radius: 50px;
+    padding: 1rem 1.6rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: lightsalmon;
+    color: white;
 }
 
 /*인스타그램 전체 틀*/
@@ -227,34 +258,26 @@ body {
     text-align: center;
 }
 
-/*        .sectionwarp > p {
-            width: 100%;
-            min-width: 768px;
-            margin-top: 100px;
-            text-align: center;
-            font-size: 30px;
-        }*/
-
-/*contact 감싸는 전체 틀*/
+/*contact 전체 틀*/
 .mycontact {
     position: relative;
     width: 100%;
     min-width: 576px;
-    min-height: 768px;
-    padding-top: 40px;
+    height: 400px;
+    padding-top: 30px;
+    text-align: center;
     background-color: powderblue;
 }
 
 /*contact 서브 틀*/
 .contactsub {
-    width: 80%;
+    width: 100%;
     min-width: 576px;
     margin: 0 auto;
     padding-top: 90px;
-    text-align: center;
 }
 
-/*about me h1*/
+/*CONTACT h1*/
 .contactsub > h1 {
     width: 100%;
     min-width: 576px;
@@ -267,43 +290,27 @@ body {
 
 /*contact 목록*/
 .contactsub li {
-    width: 30%;
-    min-width: 368px;
-    display: inline-block;
-    margin: 0.6rem;
-    padding: 3.6rem;
-    border-radius: 50px;
-    border: 1px solid white;
+    width: 50%;
+    min-width: 576px;
+    font-size: 2rem;
+    display: block;
     text-align: center;
-}
-
-/*contact 목록 마우스오버*/
-.contactsub li:hover {
-    width: 30%;
-    min-width: 368px;
-    display: inline-block;
-    margin: 0.6rem;
-    padding: 3.6rem;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-    text-align: center;
+    margin: 0 auto;
 }
 
 /*푸터 전체 틀*/
 .mylastfooter {
     position: relative;
     width: 100%;
-    min-width: 368px;
+    min-width: 576px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .mylastfooter h5 {
     font-size: 2rem;
-    text-align: center;
 }
 
 .mylastfooter p {
     font-size: 1rem;
-    text-align: center;
 }
