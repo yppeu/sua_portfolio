@@ -59,7 +59,8 @@ body {
     height: 768px;
 }
 
-/*about me*/
+
+/*about me 전체틀*/
 .myprofile {
     position: relative;
     width: 100%;
@@ -67,6 +68,14 @@ body {
     min-height: 768px;
     text-align: center;
     background-color: whitesmoke;
+}
+
+/*about me 서브틀*/
+.profilesub {
+    width: 100%;
+    min-width: 576px;
+    height: 767px;
+    padding: 4.6rem;
 }
 
 .profilesub > h1 {
@@ -79,29 +88,35 @@ body {
     color: powderblue;
 }
 
-.profilesub > img {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    width: 40%;
-    min-width: 576px;
-}
-
-.profilesub > h3{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    width: 40%;
-    min-width: 576px;
-}
-
-.profilesub > p{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    padding-top: 60px;
+/*이미지틀*/
+.profileimg{
+    float: left;
     width: 50%;
     min-width: 576px;
+    margin: 0 auto;
+}
+
+/*텍스트틀*/
+.profiletext{
+    float: right;
+    width: 50%;
+    min-width: 576px;
+    padding: 0 6.6rem 3.6rem;
+}
+
+.profiletext > h3 {
+    width: 40%;
+    min-width: 576px;
+    text-align: justify;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profiletext > p {
+    padding-top: 50px;
+    width: 40%;
+    min-width: 576px;
+    text-align: justify;
 }
 
 
