@@ -16,270 +16,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Hahmlet&display=swap"
           rel="stylesheet">
 
+    <!--외부 스타일 시트-->
+    <link rel="stylesheet" href="./index.css">
+
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">-->
     <link href="css/common.css" rel="stylesheet" type="text/css"
           media="screen and (min-width:0px) and (max-width:480px)">
 
     <title>Sua is free</title>
-    <style>
-
-        html {
-            font-size: 62.5%;
-        }
-
-        body {
-            font-size: 1.6rem;
-            font-family: 'Hahmlet', serif;
-            overflow-x: hidden;
-        }
-
-        #temp {
-            font-size: 1.6rem;
-        }
-
-        /*메인 이미지 불투명*/
-        .mytitle {
-            width: 100%;
-            min-width: 578px;
-            height: 100%;
-            min-height: 600px;
-            margin: 0 auto;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-            color: white;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            position: relative;
-            z-index: 1;
-        }
-
-        /*타이핑 효과*/
-        #maintext {
-            width: 100%;
-            min-width: 576px;
-            text-align: center;
-            font-size: 4.6rem;
-            letter-spacing: -0.2rem;
-            margin: 0 auto;
-        }
-
-        /*캐러셀 이미지*/
-        .myslide {
-            position: relative;
-            width: 100%;
-            min-width: 576px;
-        }
-
-        /* 이미지 높이 변경 */
-        .carousel-inner {
-            height: 600px;
-            position: absolute;
-            z-index: -1;
-        }
-
-        .carousel-item {
-        }
-
-        .d-block {
-            display: block;
-            height: 600px;
-        }
-
-        .carousel-inner > .carousel-item > img {
-        }
-
-        /*프로필정보 감싸는 전체 틀*/
-        .myprofile {
-            position: relative;
-            width: 100%;
-            min-width: 576px;
-            min-height: 776px;
-            padding-top: 40px;
-            background-color: powderblue;
-        }
-
-        /*서브 틀*/
-        .profilesub {
-            width: 80%;
-            min-width: 576px;
-            height: 600px;
-            margin: 0 auto;
-            padding-top: 90px;
-            text-align: center;
-        }
-
-        /*about me*/
-        .profilesub > h1 {
-            width: 100%;
-            min-width: 576px;
-            font-size: 5.6rem;
-            font-weight: bold;
-            letter-spacing: -0.1rem;
-            padding-bottom: 60px;
-            text-align: center;
-        }
-
-        /*프로필 목록*/
-        .profilesub li {
-            width: 30%;
-            min-width: 368px;
-            display: inline-block;
-            margin: 0.6rem;
-            padding: 3.6rem;
-            border-radius: 50px;
-            border: 1px solid white;
-            text-align: center;
-        }
-
-        /*프로필 목록 마우스오버*/
-        .profilesub li:hover {
-            width: 30%;
-            min-width: 368px;
-            display: inline-block;
-            margin: 0.6rem;
-            padding: 3.6rem;
-            border-radius: 50px;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-
-        /*스터디 전체 틀*/
-        .mystudy {
-            position: relative;
-            width: 100%;
-            min-width: 576px;
-            text-align: center;
-            background-color: whitesmoke;
-        }
-
-        /*스터디 감싸는 틀*/
-        .studycard {
-            display: inline-block;
-            width: 100%;
-            min-width: 576px;
-            padding: 10.6rem;
-        }
-
-        .studycard > h1 {
-            width: 100%;
-            font-size: 5.6rem;
-            font-weight: bold;
-            letter-spacing: 0.2rem;
-            padding-bottom: 70px;
-            color: powderblue;
-        }
-
-        /*스터디 목록 바디*/
-        .studycard > .studybody {
-            width: 100%;
-            height: 250px;
-            display: inline-block;
-            padding-top: 7rem;
-            margin: 0.6rem auto;
-            text-align: center;
-            border: 1px solid powderblue;
-            border-radius: 30px;
-            background-color: white;
-        }
-
-        .studycard > .studybody > h1 {
-            font-size: 3.6rem;
-        }
-
-        .studycard > .studybody > a {
-            border-radius: 50px;
-            margin: 0.6rem auto;
-            padding: 1rem;
-        }
-
-        .studycard > .studybody > a:hover {
-            border-radius: 50px;
-            margin: 0.6rem auto;
-            padding: 1rem;
-            background-color: #0dcaf0;
-            color: white;
-        }
-
-        /*work 목록*/
-        .myworklist {
-            width: 100%;
-            min-width: 576px;
-            background-color: lightsalmon;
-            padding: 10.6rem;
-        }
-
-        .myworklist > h1 {
-            width: 100%;
-            min-width: 368px;
-            font-size: 5.6rem;
-            font-weight: bold;
-            letter-spacing: -0.1rem;
-            padding-bottom: 60px;
-            text-align: center;
-            color: white;
-        }
-
-        .myworklist > .worklist {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin: 10px;
-
-        }
-
-        /*인스타그램 전체 틀*/
-        .myinstagram {
-            position: relative;
-            width: 100%;
-            min-width: 576px;
-            padding-top: 10.6rem;
-            padding-bottom: 10.6rem;
-            background-color: whitesmoke;
-        }
-
-        .myinstagram > h1{
-            width: 100%;
-            min-width: 368px;
-            font-size: 5.6rem;
-            font-weight: bold;
-            letter-spacing: -0.1rem;
-            padding-bottom: 60px;
-            text-align: center;
-        }
-
-/*        .sectionwarp > p {
-            width: 100%;
-            min-width: 768px;
-            margin-top: 100px;
-            text-align: center;
-            font-size: 30px;
-        }*/
-
-        /*푸터 전체 틀*/
-        .mylastfooter {
-            position: relative;
-            width: 100%;
-            min-width: 368px;
-            margin: 0 auto;
-        }
-
-        .mylastfooter h5 {
-            font-size: 2rem;
-            text-align: center;
-        }
-
-        .mylastfooter p {
-            font-size: 1rem;
-            text-align: center;
-        }
-
-    </style>
 </head>
 
 <body>
@@ -313,17 +57,28 @@
 <!--슬라이더 끝-->
 <!--헤더 끝-->
 
-<!--프로필 시작-->
+<!--about me 시작-->
 <div class="myprofile">
     <div class="profilesub">
         <h1>ABOUT ME</h1>
-        <li>연수아</li>
-        <li>1994년 2월 23일</li>
-        <li>010-7343-1959</li>
-        <li>yppeu@naver.com</li>
+        <img src="./img/aboutimg.png" alt="about me 이미지">
+        <h3>어떤 업무가 주어지더라도 수단과 방법을 동원하여
+            늘 해내는 쾌활하고 긍정적인 쾌냥이 입니다.
+        </h3>
+        <p>시각디자인과를 졸업 후 웹 디자인의 업무 중 시간이 흐르면서 프론트엔드에
+            관심이 생겨 2018년부터 일을 병행하면서 주말이나 퇴근 후 꾸준히
+            프론트엔드 관련(HTML, CSS)등을 배워왔습니다.
+            그러다가 아예 개발로 직종을 전향하고 싶어, 업무를 그만두고
+            KGItbank에서 약 6개월간 java과정을 수료 완료하였고,
+            개발로서의 첫 직장인 디포커스에 취업 후 10개월간 많이 배웠지만
+            제가 여태 해왔던 프론트엔드 부분에 취업을 하고 싶어 퇴사 후
+            코딩클럽스파르타에서 (HTML, CSS, JS, PYTHON)을 열심히 습득하였습니다.
+            현재 IT 관련 자격증 준비 중에 있으며 개발자 로서의 관심 분야를
+            항상 지속적으로 넓혀 가고 있습니다.
+        </p>
     </div>
 </div>
-<!--프로필 끝-->
+<!--about me 끝-->
 
 <!--스터디 시작-->
 <div class="mystudy">
@@ -382,7 +137,7 @@
         <div class="col">
             <div class="card h-100">
                 <img src="./img/insimg1.jpg"
-                     class="card-img-top" alt="카드사진1">
+                     class="card-img-top" alt="인스타그램1">
                 <div class="card-body">
                     <h5 class="card-title">sunet</h5>
                     <p class="card-text">one of them</p>
@@ -393,7 +148,7 @@
             <div class="card h-100">
                 <img src="./img/insimg2.jpg"
                      class="card-img-top"
-                     alt="카드사진2">
+                     alt="인스타그램2">
                 <div class="card-body">
                     <h5 class="card-title">sunet</h5>
                     <p class="card-text">one of them</p>
@@ -404,7 +159,7 @@
             <div class="card h-100">
                 <img src="./img/insimg3.jpg"
                      class="card-img-top"
-                     alt="카드사진3">
+                     alt="인스타그램3">
                 <div class="card-body">
                     <h5 class="card-title">sunet</h5>
                     <p class="card-text">one of them</p>
@@ -414,6 +169,17 @@
     </div>
 </div>
 <!--인스타그램 끝-->
+
+<!--프로필 시작-->
+<div class="mycontact">
+    <div class="contactsub">
+        <h1>CONTACT</h1>
+        <li>연수아</li>
+        <li>010-7343-1959</li>
+        <li>yppeu@naver.com</li>
+    </div>
+</div>
+<!--프로필 끝-->
 
 <!--푸터 시작-->
 <div class="mylastfooter">
@@ -425,67 +191,6 @@
     </div>
 </div>
 <!--푸터 끝-->
-
 </body>
-
-<script>
-
-    window.onload = function () {
-    };
-
-    /*    let content = 'SUA IS DEVELOPER.';
-        let contenttext = document.getElementById('maintext');
-        let i = 0;
-
-        function typing() {
-            if (i < content.length) {
-                let txt = content.charAt(i);
-                contenttext.innerHTML += txt;
-                console.log(contenttext);
-                i++;
-            }
-        }
-        setInterval(typing, 200);*/
-
-
-    let content = 'SUA IS DEVELOPER.';
-    let contenttext = document.getElementById('maintext');
-    let i = 0;
-
-    function typing() {
-        let txt = content[i++];
-        contenttext.innerHTML += txt;
-        if (i > content.length) {
-            contenttext.textContent = '';
-            i = 0;
-        }
-    }
-
-    setInterval(typing, 200);
-
-    $.ajax({
-        type: "GET",
-        url: "http://spartacodingclub.shop/sparta_api/weather/seoul",
-        data: {},
-        success: function (response) {
-            let temps = response['temp']
-            let cloud = response['clouds']
-
-            $('#temp').append('현재 서울시 기온 : ' + temps + '˚' + `<br>` + '강수 확률 : ' + cloud);
-            $('#temp').addClass('text-center');
-        }
-    });
-
-    /*
-        function chrbtn() {
-            $('#sectionwarp').show();
-        }
-
-        function closebtn() {
-            $('#sectionwarp').hide();
-        }
-    */
-
-
-</script>
+<script src="./index.js"></script>
 </html>
