@@ -1,0 +1,294 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Hahmlet', serif;
+    overflow-x: hidden;
+}
+
+#temp {
+    font-size: 1.6rem;
+}
+
+/*메인 이미지 불투명*/
+.mytitle {
+    width: 100%;
+    min-width: 578px;
+    height: 768px;
+    margin: 0 auto;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+/*타이핑 효과*/
+#maintext {
+    width: 100%;
+    min-width: 576px;
+    text-align: center;
+    font-size: 4.6rem;
+    letter-spacing: -0.2rem;
+    margin: 0 auto;
+}
+
+/*캐러셀 이미지*/
+.myslide {
+    position: relative;
+    width: 100%;
+    min-width: 576px;
+}
+
+/* 이미지 높이 변경 */
+.carousel-inner {
+    position: absolute;
+    z-index: -1;
+}
+
+.d-block {
+    display: block;
+    height: 768px;
+}
+
+/*about me*/
+.myprofile {
+    position: relative;
+    width: 100%;
+    min-width: 576px;
+    min-height: 768px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.profilesub > h1 {
+    width: 100%;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: powderblue;
+}
+
+.profilesub > img {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 40%;
+    min-width: 576px;
+}
+
+.profilesub > h3{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    min-width: 576px;
+}
+
+.profilesub > p{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding-top: 60px;
+    width: 50%;
+    min-width: 576px;
+}
+
+
+/*스터디 전체 틀*/
+.mystudy {
+    position: relative;
+    width: 100%;
+    min-width: 576px;
+    min-height: 768px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+/*스터디 감싸는 틀*/
+.studycard {
+    width: 100%;
+    min-width: 576px;
+}
+
+.studycard > h1 {
+    width: 100%;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: powderblue;
+}
+
+/*스터디 목록 바디*/
+.studycard > .studybody {
+    display: block;
+    width: 30%;
+    min-width: 576px;
+    height: 250px;
+    padding-top: 7rem;
+    margin: 1.6rem auto;
+    text-align: center;
+    border: 1px solid powderblue;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.studycard > .studybody > h1 {
+    font-size: 3.6rem;
+}
+
+.studycard > .studybody > a {
+    border-radius: 50px;
+    margin: 0.6rem auto;
+    padding: 1rem;
+}
+
+.studycard > .studybody > a:hover {
+    border-radius: 50px;
+    margin: 0.6rem auto;
+    padding: 1rem;
+    background-color: #0dcaf0;
+    color: white;
+}
+
+/*work 목록*/
+.myworklist {
+    width: 100%;
+    min-width: 576px;
+    background-color: lightsalmon;
+    padding: 10.6rem;
+}
+
+.myworklist > h1 {
+    width: 100%;
+    min-width: 368px;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    padding-bottom: 60px;
+    text-align: center;
+    color: white;
+}
+
+.myworklist > .worklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+
+}
+
+/*인스타그램 전체 틀*/
+.myinstagram {
+    position: relative;
+    width: 100%;
+    min-width: 576px;
+    padding-top: 10.6rem;
+    padding-bottom: 10.6rem;
+    background-color: whitesmoke;
+}
+
+.myinstagram > h1 {
+    width: 100%;
+    min-width: 368px;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/*        .sectionwarp > p {
+            width: 100%;
+            min-width: 768px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 30px;
+        }*/
+
+/*contact 감싸는 전체 틀*/
+.mycontact {
+    position: relative;
+    width: 100%;
+    min-width: 576px;
+    min-height: 768px;
+    padding-top: 40px;
+    background-color: powderblue;
+}
+
+/*contact 서브 틀*/
+.contactsub {
+    width: 80%;
+    min-width: 576px;
+    margin: 0 auto;
+    padding-top: 90px;
+    text-align: center;
+}
+
+/*about me h1*/
+.contactsub > h1 {
+    width: 100%;
+    min-width: 576px;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/*contact 목록*/
+.contactsub li {
+    width: 30%;
+    min-width: 368px;
+    display: inline-block;
+    margin: 0.6rem;
+    padding: 3.6rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+/*contact 목록 마우스오버*/
+.contactsub li:hover {
+    width: 30%;
+    min-width: 368px;
+    display: inline-block;
+    margin: 0.6rem;
+    padding: 3.6rem;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/*푸터 전체 틀*/
+.mylastfooter {
+    position: relative;
+    width: 100%;
+    min-width: 368px;
+    margin: 0 auto;
+}
+
+.mylastfooter h5 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.mylastfooter p {
+    font-size: 1rem;
+    text-align: center;
+}
