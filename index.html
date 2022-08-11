@@ -23,7 +23,6 @@
     <title>Sua is free</title>
     <style>
 
-
         html {
             font-size: 62.5%;
         }
@@ -41,8 +40,9 @@
         /*메인 이미지 불투명*/
         .mytitle {
             width: 100%;
-            min-width: 576px;
-            height: 600px;
+            min-width: 578px;
+            height: 100%;
+            min-height: 600px;
             margin: 0 auto;
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
             color: white;
@@ -152,38 +152,42 @@
             position: relative;
             width: 100%;
             min-width: 576px;
-            padding: 13.6rem 13.6rem;
             text-align: center;
             background-color: whitesmoke;
         }
 
+        /*스터디 감싸는 틀*/
+        .studycard {
+            display: inline-block;
+            width: 100%;
+            min-width: 576px;
+            padding: 10.6rem;
+        }
+
         .studycard > h1 {
             width: 100%;
-            min-width: 368px;
             font-size: 5.6rem;
             font-weight: bold;
             letter-spacing: 0.2rem;
-            padding-bottom: 60px;
-            text-align: center;
+            padding-bottom: 70px;
             color: powderblue;
         }
 
-        /*스터디 감싸는 틀*/
-        .studycard {
-            width: 100%;
-            min-width: 368px;
-        }
-
+        /*스터디 목록 바디*/
         .studycard > .studybody {
-            width: 30%;
+            width: 100%;
             height: 250px;
             display: inline-block;
             padding-top: 7rem;
-            margin: 2px;
+            margin: 0.6rem auto;
             text-align: center;
             border: 1px solid powderblue;
-            border-radius: 50px;
+            border-radius: 30px;
             background-color: white;
+        }
+
+        .studycard > .studybody > h1 {
+            font-size: 3.6rem;
         }
 
         .studycard > .studybody > a {
@@ -239,30 +243,27 @@
             background-color: whitesmoke;
         }
 
-        .sectionwarp > p {
+        .myinstagram > h1{
+            width: 100%;
+            min-width: 368px;
+            font-size: 5.6rem;
+            font-weight: bold;
+            letter-spacing: -0.1rem;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+/*        .sectionwarp > p {
             width: 100%;
             min-width: 768px;
             margin-top: 100px;
             text-align: center;
             font-size: 30px;
-        }
+        }*/
 
-        .mysection > button {
-            margin: 10px auto;
-        }
-
-        .blockquote > p {
-            font-size: 16px;
-        }
-
-        .blockquote > :last-child {
-            font-size: 15px;
-        }
-
-        /*하단 전체 틀*/
+        /*푸터 전체 틀*/
         .mylastfooter {
             position: relative;
-            top: 300px;
             width: 100%;
             min-width: 368px;
             margin: 0 auto;
@@ -363,10 +364,10 @@
             </div>
         </div>
         <div class="card mb-3">
-            <img src="./img/main1.gif" class="card-img-top" alt="...">
+            <img src="./img/main2.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">포트폴리오 페이지</h5>
-                <a href="https://github.com/yppeu/suaisfree"
+                <h5 class="card-title">영화 리뷰 페이지</h5>
+                <a href="https://github.com/yppeu/movie_review"
                    class="btn btn-outline-info" target=”_blank”>code</a>
             </div>
         </div>
@@ -376,6 +377,7 @@
 
 <!--인스타그램 시작-->
 <div class="myinstagram">
+    <h1>DAILY</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
@@ -414,7 +416,6 @@
 <!--인스타그램 끝-->
 
 <!--푸터 시작-->
-
 <div class="mylastfooter">
     <div class="card">
         <div class="card-body">
