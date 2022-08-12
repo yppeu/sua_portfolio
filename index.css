@@ -1,23 +1,33 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24Ohsquare';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
     font-family: 'Hahmlet', serif;
     overflow-x: hidden;
     background-color: whitesmoke;
-}
-
-#temp {
-    font-size: 1.6rem;
+    width: 100%;
+    min-width: 768px;
 }
 
 /*메인 이미지 불투명*/
 .mytitle {
     width: 100%;
-    min-width: 578px;
+    min-width: 768px;
     height: 768px;
     margin: 0 auto;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
@@ -34,12 +44,21 @@ body {
 
 /*타이핑 효과*/
 #maintext {
-    width: 100%;
-    min-width: 576px;
     text-align: center;
-    font-size: 4.6rem;
-    letter-spacing: -0.2rem;
+    letter-spacing: -0.1rem;
     margin: 0 auto;
+
+    font-family: 'Cafe24Ohsquare';
+    font-size: 9rem;
+}
+
+.maintext {
+    height: 120px;
+}
+
+#temp {
+    letter-spacing: -0.1rem;
+    font-size: 2.5rem;
 }
 
 /*캐러셀 이미지*/
@@ -56,37 +75,29 @@ body {
 }
 
 .d-block {
-    display: block;
     height: 768px;
 }
-
 
 /*about me 전체틀*/
 .myprofile {
     position: relative;
-    width: 100%;
-    min-width: 576px;
     text-align: center;
-    background-color: whitesmoke;
     margin: 0 auto;
+}
+
+.myprofile > h1 {
+    text-align: center;
+    font-size: 5.6rem;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    padding: 150px 0 20px 0;
 }
 
 /*about me 서브틀*/
 .profilesub {
     width: 100%;
-    min-width: 576px;
-    height: 867px;
-    padding: 6.6rem;
-    background-color: whitesmoke;
-}
-
-.profilesub > h1 {
-    width: 100%;
-    font-size: 5.6rem;
-    font-weight: bold;
-    letter-spacing: -0.1rem;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    height: 800px;
+    margin: 10rem;
 }
 
 /*이미지틀*/
@@ -106,7 +117,7 @@ body {
     float: right;
     width: 50%;
     min-width: 576px;
-    padding: 3.6rem 6.6rem 3.6rem;
+    padding: 4.6rem 6.6rem 3.6rem;
 }
 
 .profiletext > h3 {
@@ -118,7 +129,7 @@ body {
 }
 
 .profiletext > p {
-    padding-top: 50px;
+    padding-top: 40px;
     width: 40%;
     min-width: 576px;
     text-align: justify;
@@ -141,6 +152,7 @@ body {
     min-width: 576px;
 }
 
+/*스터디 제목*/
 .studycard > h1 {
     width: 100%;
     min-width: 576px;
@@ -153,14 +165,28 @@ body {
 }
 
 /*스터디 목록 바디*/
-.studycard > .studybody {
+.studybody {
     float: left;
-    width: 25%;
-    padding: 10.6rem;
-    margin: 5.6rem;
+    width: 30%;
+    min-width: 368px;
+    padding: 16.6rem 10.6rem 10.6rem;
     text-align: center;
     border-radius: 100px;
     background-color: white;
+    margin: auto 2.6rem;
+}
+
+.studybody > img {
+    position: absolute;
+    top: 300px;
+    padding-right: 200px;
+    width: 20%;
+    min-width: 368px;
+
+    background-color: #0dcaf0;
+}
+
+.studycard > .studybody > .wixlogo {
 }
 
 .studycard > .studybody > h1 {
@@ -263,10 +289,8 @@ body {
     position: relative;
     width: 100%;
     min-width: 576px;
-    height: 400px;
-    padding-top: 30px;
+    height: 300px;
     text-align: center;
-    background-color: powderblue;
 }
 
 /*contact 서브 틀*/
@@ -274,7 +298,6 @@ body {
     width: 100%;
     min-width: 576px;
     margin: 0 auto;
-    padding-top: 90px;
 }
 
 /*CONTACT h1*/
