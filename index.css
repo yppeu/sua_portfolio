@@ -198,15 +198,17 @@ body {
   display: inline;
   font-size: 14px;
   text-decoration: none;
-  background-color: #78F3FF;
+  background-color: lightgray;
+  color: black;
   padding: 10px 25px;
   margin-right: 10px;
   border-radius: 30px;
-  outline: 2px solid #78F3FF;
+  outline: 2px solid lightgray;
   transition: all 1.25s;
 }
 
 .works-inner a:hover {
+  background-color: #78F3FF;
   outline-color: #78F3FF;
   outline-offset: 7px;
 }
@@ -239,12 +241,7 @@ body {
   padding-bottom: 50px;
   background-color: white;
   border-radius: 30px;
-  transition: all 1.25s;
   cursor: pointer;
-}
-
-.study-inner:hover {
-  border: 1px solid #78F3FF;
 }
 
 .study-inner h2 {
